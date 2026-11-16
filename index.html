@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Bear Official - Лучшее Онлайн Казино</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #1a1a2e;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><radialGradient id="g1" cx="50%" cy="50%"><stop offset="0%" style="stop-color:%23ffd700;stop-opacity:0.1"/><stop offset="100%" style="stop-color:%231a1a2e;stop-opacity:0"/></radialGradient></defs><circle cx="200" cy="200" r="150" fill="url(%23g1)"/><circle cx="1000" cy="600" r="200" fill="url(%23g1)"/></svg>');
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .bonus-badge {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            padding: 15px 25px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .bonus-badge h3 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .hero-image {
+            text-align: center;
+            font-size: 200px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 60px;
+            color: #ffd700;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: #ffd700;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .feature-card p {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Games Section */
+        .games {
+            padding: 100px 0;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .game-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 237, 78, 0.05));
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+            border-color: #ffd700;
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .game-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .game-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 107, 107, 0.1));
+        }
+
+        .cta h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .btn-large {
+            padding: 20px 50px;
+            font-size: 24px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 50px 0 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: #ffd700;
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .hero-image {
+                font-size: 120px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <span class="logo-icon">🐻</span>
+                    <span>Lucky Bear</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#features">Преимущества</a></li>
+                    <li><a href="#games">Игры</a></li>
+                    <li><a href="#bonuses">Бонусы</a></li>
+                    <li><a href="https://megaplay333.xyz/5f7Aw7" target="_blank" rel="noopener noreferrer">Играть</a></li>
+                </ul>
+                <a href="https://megaplay333.xyz/5f7Aw7" target="_blank" rel="noopener noreferrer" class="btn-primary">Начать Игру</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <div class="bonus-badge">
+                        <h3>🎁 БОНУС 150% + 250 FS</h3>
+                    </div>
+                    <h1>Lucky Bear Official</h1>
+                    <p>Лучшее онлайн казино с мгновенными выплатами, честной игрой и огромным выбором слотов. Присоединяйся к тысячам победителей!</p>
+                    <a href="https://megaplay333.xyz/5f7Aw7" target="_blank" rel="noopener noreferrer" class="btn-primary btn-large">🎰 ИГРАТЬ СЕЙЧАС</a>
+                </div>
+                <div class="hero-image fade-in">
+                    🐻‍❄️
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Мгновенные Выплаты</h3>
+                    <p>Вывод средств за 5 минут на любую платежную систему без комиссий</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>2000+ Игр</h3>
+                    <p>Огромная коллекция слотов, рулетка, блэкджек и live-казино от топовых провайдеров</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>100% Безопасность</h3>
+                    <p>Лицензированное казино с защитой данных и честной игрой на сертифицированных автоматах</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Щедрые Бонусы</h3>
+                    <p>Приветственный пакет до 100 000₽, кэшбэк каждую неделю и VIP программа</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Мобильная Версия</h3>
+                    <p>Играй где угодно с идеальной оптимизацией для смартфонов и планшетов</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎧</div>
+                    <h3>Поддержка 24/7</h3>
+                    <p>Профессиональная служба поддержки на русском языке круглосуточно</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="games" id="games">
+        <div class="container">
+            <h2 class="section-title">Популярные Игры</h2>
+            <div class="games-grid">
+                <a href="https://megaplay333.xyz/5f7Aw7" target="_blank" rel="noopener noreferrer" class="game-card" style="text-decoration: none; color: inherit;">
+                    <div class="game-icon">🎰</div>
+                    <h3>Слоты</h3>
+                    <p>Более 1500 игровых автоматов</p>
+                </a>
+                <a href="https://megaplay333.xyz/5f7Aw7" target="_blank" rel="noopener noreferrer" class="game-card" style="text-decoration: none; color: inherit;">
+                    <div class="game-icon">🃏</div>
+                    <h3>Карточные Игры</h3>
+                    <p>Блэкджек, покер, баккара</p>
+                </a>
+                <a href="https://megaplay333.xyz/5f7Aw7" target="_blank" rel="noopener noreferrer" class="game-card" style="text-decoration: none; color: inherit;">
+                    <div class="game-icon">🎡</div>
+                    <h3>Рулетка</h3>
+                    <p>Европейская и американская</p>
+                </a>
+                <a href="https://megaplay333.xyz/5f7Aw7" target="_blank" rel="noopener noreferrer" class="game-card" style="text-decoration: none; color: inherit;">
+                    <div class="game-icon">📺</div>
+                    <h3>Live Казино</h3>
+                    <p>Игра с реальными дилерами</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="bonuses">
+        <div class="container">
+            <h2>Забери свой бонус прямо сейчас!</h2>
+            <p>Регистрируйся и получи 150% на первый депозит + 250 бесплатных спинов</p>
+            <a href="https://megaplay333.xyz/5f7Aw7" target="_blank" rel="noopener noreferrer" class="btn-primary btn-large">🚀 РЕГИСТРАЦИЯ</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo" style="justify-content: center; margin-bottom: 20px;">
+                    <span class="logo-icon">🐻</span>
+                    <span>Lucky Bear Official</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://megaplay333.xyz/5f7Aw7" target="_blank" rel="noopener noreferrer">Главная</a>
+                    <a href="https://megaplay333.xyz/5f7Aw7" target="_blank" rel="noopener noreferrer">Игры</a>
+                    <a href="https://megaplay333.xyz/5f7Aw7" target="_blank" rel="noopener noreferrer">Бонусы</a>
+                    <a href="https://megaplay333.xyz/5f7Aw7" target="_blank" rel="noopener noreferrer">Поддержка</a>
+                </div>
+            </div>
+            <p class="copyright">© 2026 Lucky Bear Official. Все права защищены. 18+</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .game-card').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all 0.6s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
